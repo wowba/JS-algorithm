@@ -1,5 +1,4 @@
-const array = [1, 2, 4, 5, 7, 3, 6, 8, 9, 0]
-console.log(array)
+const array = [1, 5, 3, 4, 2]
 
 const SelectionSort = (arr) => {
   for (let i = 0; i < arr.length; i++) {
@@ -13,8 +12,8 @@ const SelectionSort = (arr) => {
     let temp = arr[i]
     arr[i] = arr[minIndex]
     arr[minIndex] = temp
+    console.log(arr)
   }
-  console.log(arr)
 }
 
 SelectionSort(array)
