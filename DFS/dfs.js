@@ -13,3 +13,18 @@ const dfs = (graph, v, visited) => {
   // 현재 노드 방문 마무리
   visited[v] = false
 }
+
+// 그래프
+let graph = [
+  [,
+    [],
+    [2],
+    [1]
+  ]
+]
+
+// 방문 기록
+let visited = new Array(2).fill(false)
+
+// dfs
+dfs(graph, 1, visited)
