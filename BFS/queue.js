@@ -1,34 +1,22 @@
-class Node {
-  constructor(data) {
-    this.data = data;
-    this.next = null;
-  }
-}
-
 class Queue {
   constructor() {
-    this.front = null;
-    this.rear = null;
-    this.size = 0;
+    this.items = 1;
+    this.headIndex = 0;
+    this.tailIndex = 0;
   }
-
-  isEmpty() {
-    return this.size === 0;
+  enqueue(item) {
+    this.items[this.tailIndex] = item;
+    this.tailIndex++;
   }
-
-  enqueue(data) {
-    const newNode = new Node(data);
-    if (this.isEmpty()) this.front = newNode;
-    else this.rear.next = newNode;
-    this.rear = newNode;
-    this.size++;
-  }
-
   dequeue() {
-    if (this.isEmpty()) return;
-    const data = this.front.data;
-    this.front = this.front.next;
-    this.size--;
-    return data;
+    const idem = this.items[this.headIndex];
+    delete this.items[this.headIndex]; this.headIndex++;
+    return item;
+  }
+  peek() {
+    return this.items[this.headIndex];
+  }
+  getLength() {
+    return this.tailIndex - this.headIndex;
   }
 }
