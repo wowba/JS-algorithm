@@ -20,8 +20,6 @@ function solution(n, wires) {
       graph[end].push(start)
     }
 
-    // dfsNodes를 기반으로 dfs 수행, 노드의 개수 차 기록하기
-    // 두 그래프 중 하나만 dfs 해도 된다.
     let cnt = 0 // 한쪽 그레프 노드의 수
     const dfs = (node) => {
       const nextNodes = graph[node]
